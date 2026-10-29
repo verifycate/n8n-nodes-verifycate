@@ -625,6 +625,7 @@ export const verifycateProperties: INodeProperties[] = [
 			'delete',
 		]),
 	),
+	recipientEmail(show('certificateIssue', 'addRecipient')),
 	{
 		displayName: 'Recipient Name',
 		name: 'name',
@@ -806,7 +807,8 @@ export const verifycateProperties: INodeProperties[] = [
 				name: 'Approve',
 				value: 'approve',
 				action: 'Approve request',
-				description: 'Approve a certificate request and issue the certificate',
+				description:
+					'Approve a certificate request and issue the certificate. Returns the issued certificate.',
 			},
 			{
 				name: 'Get Many',
@@ -893,7 +895,8 @@ export const verifycateProperties: INodeProperties[] = [
 				name: 'Approve',
 				value: 'approve',
 				action: 'Approve correction',
-				description: 'Approve a correction request and apply the changes',
+				description:
+					'Approve a correction request and apply the changes. Returns the updated certificate issue.',
 			},
 			{
 				name: 'Get Many',

@@ -45,7 +45,9 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        # The node runtime ships prebuilt; native builds from n8n-workflow's
+        # dev-only expression runtime are not needed for lint, build, or tests.
+        run: npm ci --ignore-scripts
 
       - name: Release
         run: |

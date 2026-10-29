@@ -69,6 +69,17 @@ describe('node descriptions', () => {
 		}
 	});
 
+	test('Add Recipient asks for the recipient email', () => {
+		const node = new Verifycate();
+		const email = node.description.properties.find(
+			(property) =>
+				property.name === 'email' &&
+				property.displayOptions?.show?.operation?.includes('addRecipient'),
+		);
+
+		expect(email).toEqual(expect.objectContaining({ required: true }));
+	});
+
 	test('the action node requires the API credential and is usable as an AI tool', () => {
 		const node = new Verifycate();
 		expect(node.description.credentials).toEqual([
