@@ -1,5 +1,5 @@
 {
-	"node": "n8n-nodes-verifycate.verifycateTrigger",
+	"node": "@verifycate/n8n-nodes-verifycate.verifycateTrigger",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"categories": ["Productivity", "Marketing & Content"],

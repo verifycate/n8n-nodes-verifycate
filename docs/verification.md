@@ -31,15 +31,15 @@ commits, tags, and pushes. The tag triggers `publish.yml`, which publishes with
 Then confirm the published package:
 
 ```bash
-npm view n8n-nodes-verifycate version dist.integrity
-npx @n8n/scan-community-package n8n-nodes-verifycate
+npm view @verifycate/n8n-nodes-verifycate version dist.integrity
+npx @n8n/scan-community-package @verifycate/n8n-nodes-verifycate
 ```
 
 ## Submit to the Creator Portal
 
 Open <https://creators.n8n.io/nodes> and provide:
 
-- npm package name: `n8n-nodes-verifycate`
+- npm package name: `@verifycate/n8n-nodes-verifycate`
 - public repository: <https://github.com/verifycate/n8n-nodes-verifycate>
 - License: MIT
 - Documentation: the repository README and the Verifycate developer docs
@@ -50,7 +50,7 @@ Before submitting, confirm:
 
 - [ ] `npm run check` passes locally and in GitHub Actions.
 - [ ] The package is published from GitHub Actions with provenance.
-- [ ] `npx @n8n/scan-community-package n8n-nodes-verifycate` passes.
+- [ ] `npx @n8n/scan-community-package @verifycate/n8n-nodes-verifycate` passes.
 - [ ] The repository is public, MIT licensed, and has no runtime dependencies.
 - [ ] The README covers installation, credentials, actions, triggers, and
       example workflows.

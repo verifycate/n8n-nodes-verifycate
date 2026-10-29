@@ -9,7 +9,7 @@ import type {
 export const NODE: INode = {
 	id: 'verifycate-node',
 	name: 'Verifycate',
-	type: 'n8n-nodes-verifycate.verifycate',
+	type: '@verifycate/n8n-nodes-verifycate.verifycate',
 	typeVersion: 1,
 	position: [0, 0],
 	parameters: {},

@@ -97,7 +97,7 @@ describe('error mapping', () => {
 		const error = toNodeApiError(
 			{
 				name: 'Verifycate',
-				type: 'n8n-nodes-verifycate.verifycate',
+				type: '@verifycate/n8n-nodes-verifycate.verifycate',
 				typeVersion: 1,
 				position: [0, 0],
 				parameters: {},

@@ -1,5 +1,5 @@
 {
-	"name": "n8n-nodes-verifycate",
+	"name": "@verifycate/n8n-nodes-verifycate",
 	"version": "0.1.0",
 	"description": "Use Verifycate in n8n to issue, revoke, replace, and track certificates, and trigger workflows on certificate events.",
 	"license": "MIT",
@@ -43,6 +43,9 @@
 		"spec:sync": "node scripts/sync-spec.mjs",
 		"test": "vitest run",
 		"smoke": "node scripts/smoke.mjs"
+	},
+	"publishConfig": {
+		"access": "public"
 	},
 	"files": [
 		"dist",

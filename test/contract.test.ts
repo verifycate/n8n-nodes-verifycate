@@ -113,7 +113,7 @@ describe('node descriptions', () => {
 
 describe('package manifest', () => {
 	test('declares the built nodes and credential', () => {
-		expect(manifest.name).toBe('n8n-nodes-verifycate');
+		expect(manifest.name).toBe('@verifycate/n8n-nodes-verifycate');
 		expect(manifest.keywords).toContain('n8n-community-node-package');
 		expect(manifest.n8n.n8nNodesApiVersion).toBe(1);
 		expect(manifest.n8n.strict).toBe(true);

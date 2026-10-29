@@ -10,7 +10,7 @@ mitigation as soon as practical.
 
 ## Supported versions
 
-Only the latest published version of `n8n-nodes-verifycate` receives security
+Only the latest published version of `@verifycate/n8n-nodes-verifycate` receives security
 fixes.
 
 ## Credential handling

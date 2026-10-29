@@ -13,7 +13,7 @@ service itself is a paid product; the node only talks to its public API.
 
 ## Status
 
-`0.1.0`. The package is prepared for release as `n8n-nodes-verifycate` and is
+`0.1.0`. The package is prepared for release as `@verifycate/n8n-nodes-verifycate` and is
 being prepared for the n8n verified community node program. Verified nodes are
 installable from the nodes panel on n8n Cloud and self-hosted n8n. Until the
 review completes, n8n Cloud users cannot install it from the panel.
@@ -43,10 +43,16 @@ Once the package is verified, open a workflow, choose **+**, search for
 
 1. Open **Settings → Community nodes**.
 2. Choose **Install a community node**.
-3. Enter `n8n-nodes-verifycate` and confirm.
+3. Enter `@verifycate/n8n-nodes-verifycate` and confirm.
 
 For a manual install, add the package to the custom nodes directory used by your
-n8n image. The package must be installed where n8n can load it, not globally.
+n8n image:
+
+```bash
+npm install @verifycate/n8n-nodes-verifycate
+```
+
+The package must be installed where n8n can load it, not globally.
 
 ## Connect
 
@@ -258,13 +264,13 @@ publishes to npm with `--provenance`.
 
 One-time npm setup: in the package settings on npmjs.com, add a **Trusted
 Publisher** for GitHub Actions with repository owner `verifycate`, repository
-`n8n-nodes-verifycate`, and workflow `publish.yml`. No long-lived token is
+`@verifycate/n8n-nodes-verifycate`, and workflow `publish.yml`. No long-lived token is
 needed.
 
 After a release:
 
 ```bash
-npx @n8n/scan-community-package n8n-nodes-verifycate
+npx @n8n/scan-community-package @verifycate/n8n-nodes-verifycate
 ```
 
 Then submit the package through the
