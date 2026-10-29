@@ -6040,7 +6040,7 @@
           "email": {
             "description": "Raw email value exactly as entered or imported",
             "examples": [
-              "Ada \u003cada@example.com\u003e"
+              "Ada <ada@example.com>"
             ],
             "type": "string"
           },
@@ -6117,7 +6117,7 @@
           "input": {
             "description": "Raw email value exactly as entered or imported",
             "examples": [
-              "Ada \u003cada@example.com\u003e"
+              "Ada <ada@example.com>"
             ],
             "type": "string"
           },
