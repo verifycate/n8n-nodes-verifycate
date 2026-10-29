@@ -46,6 +46,17 @@ export class VerifycateTrigger implements INodeType {
 		version: 1,
 		subtitle: '={{ $parameter["events"].join(", ") }}',
 		description: 'Starts the workflow when Verifycate events occur',
+		triggerPanel: {
+			header: 'Verifycate sends signed events to this workflow after it is active.',
+			executionsHelp: {
+				inactive:
+					'Click Test workflow, then send a test delivery from Verifycate under Settings → Webhooks, or trigger a real certificate event.',
+				active:
+					'Verifycate is delivering events to the production webhook URL. Deactivate the workflow to remove the subscription.',
+			},
+			activationHint:
+				'Activate the workflow to create the Verifycate webhook subscription. The webhook URL must be public HTTPS.',
+		},
 		defaults: {
 			name: 'Verifycate Trigger',
 		},
