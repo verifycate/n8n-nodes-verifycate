@@ -13,8 +13,8 @@ service itself is a paid product; the node only talks to its public API.
 
 ## Status
 
-`0.1.0`. The package is published to npm as `n8n-nodes-verifycate` and is being
-prepared for the n8n verified community node program. Verified nodes are
+`0.1.0`. The package is prepared for release as `n8n-nodes-verifycate` and is
+being prepared for the n8n verified community node program. Verified nodes are
 installable from the nodes panel on n8n Cloud and self-hosted n8n. Until the
 review completes, n8n Cloud users cannot install it from the panel.
 
