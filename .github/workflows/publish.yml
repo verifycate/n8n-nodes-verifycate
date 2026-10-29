@@ -1,23 +1,23 @@
 # Publishes the package to npm on every version tag.
 #
 # n8n requires community nodes submitted for verification to be published from
-# GitHub Actions with an npm provenance statement. Provenance lets anyone verify
-# that a package was built by this workflow, from this repository and commit.
+# GitHub Actions with an npm provenance statement. This workflow uses npm
+# Trusted Publishing, so no long-lived npm token is stored in the repository.
 #
-# One-time setup (recommended, no long-lived secret):
-#   1. On npmjs.com, open the package settings.
-#   2. Under Publish access → Trusted Publishers, add a GitHub Actions publisher.
-#   3. Repository owner: verifycate
-#      Repository name:  n8n-nodes-verifycate
-#      Workflow name:    publish.yml
+# One-time setup:
+#   1. Publish the first version once (see docs/verification.md) so the npm
+#      package exists.
+#   2. On npmjs.com, open @verifycate/n8n-nodes-verifycate → Settings.
+#   3. Under Publish access → Trusted Publishers, add a GitHub Actions publisher:
+#        Repository owner: verifycate
+#        Repository name:  n8n-nodes-verifycate
+#        Workflow name:    publish.yml
 #   4. Leave NPM_TOKEN unset. GitHub's OIDC token is used instead.
-#
-# Alternatively, add a granular npm access token as the NPM_TOKEN secret.
 #
 # Release process:
 #   npm run release
 # This lints, builds, bumps the version, updates the changelog, commits, tags,
-# and pushes. The tag triggers this workflow.
+# and pushes. The tag triggers this workflow to publish with provenance.
 
 name: Publish
 
@@ -43,15 +43,16 @@ jobs:
         with:
           node-version: 22
           cache: npm
+          registry-url: 'https://registry.npmjs.org/'
 
       - name: Install dependencies
         # The node runtime ships prebuilt; native builds from n8n-workflow's
         # dev-only expression runtime are not needed for lint, build, or tests.
         run: npm ci --ignore-scripts
 
+      - name: Verify
+        run: npm run check
+
       - name: Release
-        run: |
-          [ -n "$NPM_TOKEN" ] && npm config set //registry.npmjs.org/:_authToken "$NPM_TOKEN"
-          npm run release
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        # In GitHub Actions, n8n-node release publishes with provenance enabled.
+        run: npm run release

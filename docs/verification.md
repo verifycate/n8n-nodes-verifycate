@@ -6,7 +6,7 @@ to the n8n verified community node program.
 ## One-time npm setup
 
 1. Create the `verifycate` npm organization.
-2. Create the package by publishing the first version (see Release).
+2. Create the package by publishing the first version once (see First publish).
 3. On npmjs.com, open the package settings.
 4. Under **Publish access → Trusted Publishers**, add a GitHub Actions
    publisher:
@@ -15,6 +15,37 @@ to the n8n verified community node program.
    - Workflow name: `publish.yml`
 5. Leave `NPM_TOKEN` unset in GitHub. GitHub's OIDC token is used for
    provenance.
+
+If you used a one-off npm token to bootstrap the first publish, revoke it after
+the trusted publisher is configured.
+
+## First publish
+
+Trusted Publishing needs the package to exist before it can be configured, so
+the first version is published once with the account's 2FA prompt:
+
+```bash
+npm run build
+npm publish --access public --ignore-scripts
+```
+
+Enter the one-time password when npm asks. Do not commit an npm token. This
+first version will not have provenance; publish the next patch version through
+GitHub Actions and submit that version for verification.
+
+## Trusted publisher
+
+The npm website is the reliable path because npm requires 2FA for this change.
+Add the trusted publisher under the package settings using the values above.
+
+On npm CLI 11.15 or newer, after the package exists, the equivalent is:
+
+```bash
+npm trust github --file publish.yml --repo verifycate/n8n-nodes-verifycate --allow-publish
+```
+
+npm prompts for 2FA. The package is read from the current directory's
+`package.json`.
 
 ## Release
 
