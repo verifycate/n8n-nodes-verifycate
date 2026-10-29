@@ -41,7 +41,7 @@ Add the trusted publisher under the package settings using the values above.
 On npm CLI 11.15 or newer, after the package exists, the equivalent is:
 
 ```bash
-npm trust github --file publish.yml --repo verifycate/n8n-nodes-verifycate --allow-publish
+npm trust github --file publish.yml --repo verifycate/n8n-nodes-verifycate --allow-publish -- @verifycate/n8n-nodes-verifycate
 ```
 
 npm prompts for 2FA. The package is read from the current directory's
