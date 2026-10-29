@@ -8,6 +8,15 @@ updates:
     groups:
       development:
         dependency-type: development
+    ignore:
+      - dependency-name: eslint
+        update-types: ['version-update:semver-major']
+      - dependency-name: typescript
+        update-types: ['version-update:semver-major']
+      - dependency-name: vitest
+        update-types: ['version-update:semver-major']
+      - dependency-name: '@n8n/node-cli'
+        update-types: ['version-update:semver-major']
   - package-ecosystem: github-actions
     directory: /
     schedule:
