@@ -1,0 +1,18 @@
+{
+	"node": "n8n-nodes-verifycate.verifycate",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Productivity", "Marketing & Content"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://developers.verifycate.com/docs/api/authentication"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://github.com/verifycate/n8n-nodes-verifycate#readme"
+			}
+		]
+	}
+}

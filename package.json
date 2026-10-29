@@ -1,0 +1,71 @@
+{
+	"name": "n8n-nodes-verifycate",
+	"version": "0.1.0",
+	"description": "Use Verifycate in n8n to issue, revoke, replace, and track certificates, and trigger workflows on certificate events.",
+	"license": "MIT",
+	"homepage": "https://verifycate.com",
+	"keywords": [
+		"n8n-community-node-package",
+		"n8n",
+		"verifycate",
+		"certificates",
+		"credentials",
+		"digital badges",
+		"automation"
+	],
+	"author": {
+		"name": "Verifycate",
+		"email": "hello@verifycate.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/verifycate/n8n-nodes-verifycate.git"
+	},
+	"engines": {
+		"node": ">=22"
+	},
+	"scripts": {
+		"api:check": "node scripts/generate-api.mjs --check",
+		"api:generate": "node scripts/generate-api.mjs",
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"check": "npm run format:check && npm run api:check && npm run lint && npm run build && npm test",
+		"dev": "n8n-node dev",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"prepublishOnly": "n8n-node prerelease",
+		"release": "n8n-node release",
+		"spec:sync": "node scripts/sync-spec.mjs",
+		"test": "vitest run",
+		"smoke": "node scripts/smoke.mjs"
+	},
+	"files": [
+		"dist",
+		"!dist/tsconfig.tsbuildinfo",
+		"!dist/**/*.map"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/VerifycateApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/Verifycate/Verifycate.node.js",
+			"dist/nodes/VerifycateTrigger/VerifycateTrigger.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "0.54.4",
+		"eslint": "9.32.0",
+		"prettier": "3.6.2",
+		"release-it": "^21.1.0",
+		"typescript": "5.9.2",
+		"vitest": "^3.2.4"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}

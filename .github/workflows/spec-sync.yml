@@ -1,0 +1,37 @@
+name: Spec sync
+
+on:
+  schedule:
+    # Mondays at 06:00 UTC.
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  drift:
+    name: Snapshot matches the published API
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Refresh the snapshot from the public document
+        run: npm run spec:sync
+
+      - name: Regenerate the operation map
+        run: npm run api:generate
+
+      - name: Fail when the node is behind the API
+        run: |
+          if ! git diff --quiet -- openapi/openapi.json shared/generated/api.ts; then
+            echo "::error::The published OpenAPI document changed. Run 'npm run spec:sync && npm run api:generate', review the diff, and release a version."
+            git diff --stat -- openapi/openapi.json shared/generated/api.ts
+            exit 1
+          fi
