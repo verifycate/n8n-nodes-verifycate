@@ -214,15 +214,16 @@ npm run dev
 `npm run dev` starts a local n8n instance with the node loaded. Set
 `WEBHOOK_URL` to a public HTTPS URL if you want to exercise the trigger.
 
-| Command                | Purpose                                                        |
-| ---------------------- | -------------------------------------------------------------- |
-| `npm test`             | Unit and contract tests with Vitest.                           |
-| `npm run lint`         | n8n strict community-node lint, including cloud compatibility. |
-| `npm run build`        | Compile the package into `dist/`.                              |
-| `npm run check`        | Formatting, API drift, lint, build, and tests.                 |
-| `npm run spec:sync`    | Refresh `openapi/openapi.json` from the published API.         |
-| `npm run api:generate` | Regenerate `shared/generated/api.ts` from the snapshot.        |
-| `npm run api:check`    | Fail when the generated operation map is stale.                |
+| Command                | Purpose                                                             |
+| ---------------------- | ------------------------------------------------------------------- |
+| `npm test`             | Unit and contract tests with Vitest.                                |
+| `npm run lint`         | n8n strict community-node lint, including cloud compatibility.      |
+| `npm run build`        | Compile the package into `dist/`.                                   |
+| `npm run check`        | Formatting, API drift, lint, build, and tests.                      |
+| `npm run spec:sync`    | Refresh `openapi/openapi.json` from the published API.              |
+| `npm run api:generate` | Regenerate `shared/generated/api.ts` from the snapshot.             |
+| `npm run api:check`    | Fail when the generated operation map is stale.                     |
+| `npm run smoke`        | Read-only check against a real workspace. Set `VERIFYCATE_API_KEY`. |
 
 Point the node at another API host with the **Base URL** credential field, for
 example `http://localhost:8080` while running the Verifycate API locally.
