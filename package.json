@@ -21,6 +21,9 @@
 		"type": "git",
 		"url": "https://github.com/verifycate/n8n-nodes-verifycate.git"
 	},
+	"bugs": {
+		"url": "https://github.com/verifycate/n8n-nodes-verifycate/issues"
+	},
 	"engines": {
 		"node": ">=22"
 	},

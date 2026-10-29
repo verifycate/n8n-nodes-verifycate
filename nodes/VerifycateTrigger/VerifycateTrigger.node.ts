@@ -236,7 +236,8 @@ export class VerifycateTrigger implements INodeType {
 					);
 				}
 
-				const name = `n8n: ${this.getWorkflow().name} / ${this.getNode().name}`.slice(0, 120);
+				const workflowName = this.getWorkflow().name || 'Workflow';
+				const name = `n8n: ${workflowName} / ${this.getNode().name}`.slice(0, 120);
 				const body: IDataObject = {
 					name,
 					url,
