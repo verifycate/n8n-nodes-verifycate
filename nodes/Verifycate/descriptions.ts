@@ -848,6 +848,14 @@ export const verifycateProperties: INodeProperties[] = [
 		displayOptions: show('request', 'reject'),
 	},
 	{
+		displayName:
+			'Approve returns the issued certificate. Use Simplified or Raw output to read its fields.',
+		name: 'approveNotice',
+		type: 'notice',
+		default: '',
+		displayOptions: show('request', 'approve'),
+	},
+	{
 		displayName: 'Filters',
 		name: 'filters',
 		type: 'collection',
@@ -934,6 +942,14 @@ export const verifycateProperties: INodeProperties[] = [
 		default: '',
 		description: 'Optional reviewer note shown to the recipient in the rejection email',
 		displayOptions: show('correction', 'reject'),
+	},
+	{
+		displayName:
+			'Approve returns the updated certificate issue. Use Simplified or Raw output to read its fields.',
+		name: 'approveNotice',
+		type: 'notice',
+		default: '',
+		displayOptions: show('correction', 'approve'),
 	},
 	{
 		displayName: 'Filters',

@@ -19,10 +19,20 @@ to the n8n verified community node program.
 If you used a one-off npm token to bootstrap the first publish, revoke it after
 the trusted publisher is configured.
 
+## Status
+
+- `0.1.0` was published once to bootstrap the package. It has no provenance and
+  is not the submission candidate.
+- The GitHub Actions trusted publisher is configured for this repository and
+  `publish.yml`.
+- `0.1.1` is the current submission candidate and must be published by the
+  `Publish` workflow.
+
 ## First publish
 
 Trusted Publishing needs the package to exist before it can be configured, so
-the first version is published once with the account's 2FA prompt:
+the first version was published once with the account's 2FA prompt. This is
+only needed for a brand-new package:
 
 ```bash
 npm run build

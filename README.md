@@ -1,5 +1,9 @@
 # Verifycate for n8n
 
+[![CI](https://github.com/verifycate/n8n-nodes-verifycate/actions/workflows/ci.yml/badge.svg)](https://github.com/verifycate/n8n-nodes-verifycate/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/%40verifycate%2Fn8n-nodes-verifycate)](https://www.npmjs.com/package/@verifycate/n8n-nodes-verifycate)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 The official [n8n](https://n8n.io) community node for
 [Verifycate](https://verifycate.com).
 
@@ -13,10 +17,11 @@ service itself is a paid product; the node only talks to its public API.
 
 ## Status
 
-`0.1.0`. The package is prepared for release as `@verifycate/n8n-nodes-verifycate` and is
-being prepared for the n8n verified community node program. Verified nodes are
-installable from the nodes panel on n8n Cloud and self-hosted n8n. Until the
-review completes, n8n Cloud users cannot install it from the panel.
+`0.1.0` is published as `@verifycate/n8n-nodes-verifycate`. `0.1.1` is the
+verification candidate, published from GitHub Actions with npm provenance.
+Verified community nodes are installable from the nodes panel on n8n Cloud and
+self-hosted n8n. Until the review completes, n8n Cloud users cannot install it
+from the panel.
 
 ## Requirements
 
@@ -52,7 +57,9 @@ n8n image:
 npm install @verifycate/n8n-nodes-verifycate
 ```
 
-The package must be installed where n8n can load it, not globally.
+The package must be installed where n8n can load it, not globally. If the
+Community Nodes panel is disabled on your instance, set
+`N8N_COMMUNITY_PACKAGES_ENABLED=true` before starting n8n.
 
 ## Connect
 
