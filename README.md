@@ -17,11 +17,11 @@ service itself is a paid product; the node only talks to its public API.
 
 ## Status
 
-`0.1.0` is published as `@verifycate/n8n-nodes-verifycate`. `0.1.3` is the
-verification candidate, published from GitHub Actions with npm provenance.
-Verified community nodes are installable from the nodes panel on n8n Cloud and
-self-hosted n8n. Until the review completes, n8n Cloud users cannot install it
-from the panel.
+`0.1.3` is published as `@verifycate/n8n-nodes-verifycate` from GitHub Actions
+with npm provenance, and has passed the n8n community package security scan.
+It is the current verification candidate. Verified community nodes are
+installable from the nodes panel on n8n Cloud and self-hosted n8n. Until the
+review completes, n8n Cloud users cannot install it from the panel.
 
 ## Requirements
 

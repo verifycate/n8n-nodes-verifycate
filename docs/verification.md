@@ -25,8 +25,9 @@ the trusted publisher is configured.
   is not the submission candidate.
 - The GitHub Actions trusted publisher is configured for this repository and
   `publish.yml`.
-- `0.1.3` is the current submission candidate and must be published by the
-  `Publish` workflow.
+- `0.1.3` is published with npm provenance and has passed
+  `npx @n8n/scan-community-package @verifycate/n8n-nodes-verifycate`.
+- `0.1.3` is the current submission candidate.
 
 ## First publish
 
