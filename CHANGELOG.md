@@ -4,6 +4,13 @@ All notable changes to this package are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the package uses
 [Semantic Versioning](https://semver.org/).
 
+## [0.1.2] - 2026-10-30
+
+### Fixed
+
+- Use the canonical `git+https://` repository URL so npm trusted publishing
+  can validate the GitHub repository.
+
 ## [0.1.1] - 2026-10-30
 
 ### Changed

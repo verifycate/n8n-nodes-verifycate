@@ -1,6 +1,6 @@
 {
 	"name": "@verifycate/n8n-nodes-verifycate",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Use Verifycate in n8n to issue, revoke, replace, and track certificates, and trigger workflows on certificate events.",
 	"license": "MIT",
 	"homepage": "https://verifycate.com",
@@ -19,7 +19,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/verifycate/n8n-nodes-verifycate.git"
+		"url": "git+https://github.com/verifycate/n8n-nodes-verifycate.git"
 	},
 	"bugs": {
 		"url": "https://github.com/verifycate/n8n-nodes-verifycate/issues"

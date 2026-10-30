@@ -56,3 +56,5 @@ jobs:
       - name: Release
         # In GitHub Actions, n8n-node release publishes with provenance enabled.
         run: npm run release
+        env:
+          NPM_CONFIG_LOGLEVEL: verbose
