@@ -1,6 +1,6 @@
 {
 	"name": "@verifycate/n8n-nodes-verifycate",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Use Verifycate in n8n to issue, revoke, replace, and track certificates, and trigger workflows on certificate events.",
 	"license": "MIT",
 	"homepage": "https://verifycate.com",
