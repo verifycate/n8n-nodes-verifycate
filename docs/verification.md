@@ -25,7 +25,7 @@ the trusted publisher is configured.
   is not the submission candidate.
 - The GitHub Actions trusted publisher is configured for this repository and
   `publish.yml`.
-- `0.1.2` is the current submission candidate and must be published by the
+- `0.1.3` is the current submission candidate and must be published by the
   `Publish` workflow.
 
 ## First publish

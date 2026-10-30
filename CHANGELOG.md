@@ -4,6 +4,14 @@ All notable changes to this package are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the package uses
 [Semantic Versioning](https://semver.org/).
 
+## [0.1.3] - 2026-10-30
+
+### Fixed
+
+- Publish from Node 24 so the workflow uses npm 11 and its OIDC trusted
+  publishing support. Node 22 bundles npm 10, which signs provenance but does
+  not exchange the GitHub OIDC token for an npm publish token.
+
 ## [0.1.2] - 2026-10-30
 
 ### Fixed
